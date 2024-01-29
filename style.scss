@@ -1,0 +1,203 @@
+
+$word-color: gold;
+$line-color: #2400b2;
+
+// .................... uprava webu ....................
+
+body, html {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+header {
+	background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("images/7489905.jpg");
+    background-size: cover;
+    height: 60vh;
+    background-attachment: fixed;
+}
+
+nav {
+ background-color: #4b1c4a;;
+ padding: 15px;
+ font-size: 20px;
+}
+
+nav ul {
+	display: flex;
+	justify-content: center;
+	gap: 50px;
+	align-items: center;
+	margin: 0 auto;
+
+}
+
+nav ul li {
+	list-style-type: none;
+	position: relative;
+}
+
+nav ul li a {
+	color: $word-color;
+	font-weight: bold;
+}
+
+nav ul li a:hover {
+	color: gold;
+}
+
+nav ul li::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	background-color:gold;
+	bottom: 0;
+	left: 0;
+	transform: scaleX(0); /* Čára bude původně neviditelná */
+    transform-origin: 0 100%;
+    transition: transform 0.5s ease; /* Animace pro čáru */
+}
+
+nav ul li:hover::before {
+    transform: scaleX(1);
+}
+
+// ------------ client button ---------------
+
+.client-button {
+	text-align: right;
+	margin-right: 80px;
+	margin-top: -45px;
+}
+
+.btn1 {
+	background-color: #8301c0;
+	color: $word-color;
+	border: none;
+	padding: 10px 30px;
+	border-radius: 5px;
+	font-size: 16px;
+}
+
+// =================== main ========================
+
+main {
+	background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),url("images/1186.jpeg");
+	padding-top: 50px;
+    background-size: cover;
+    border: none;
+}
+
+.container {
+	width: 1200px;
+}
+
+// ------------ main-title ------------
+
+.main-title {
+	color: $word-color;
+	margin: 30px 0px;
+}
+
+.main-title::after {
+content: "";
+display: block;
+width: 0px;
+border-bottom: 5px solid blue;
+margin: 10px 0px;
+animation: expandLine 2s ease-out forwards; /* Animace trvá 2 sekundy */
+}
+
+@keyframes expandLine {
+	to {
+	  width: 1000px; /* Končí s plnou šířkou */
+	}
+}
+
+.main-par {
+	color: $word-color;
+	margin: 40px 0px;
+	font-size: 18px;
+
+}
+
+
+
+
+// ----------- main cards ----------------
+
+
+.main-cards-title::after {
+	content: "";
+	display: block;
+	width: 0px;
+	border-bottom: 5px solid blue;
+	margin: 10px 0px;
+	animation: expandLine 2s ease-out forwards; /* Animace trvá 2 sekundy */
+	}
+	
+	@keyframes expandLine {
+		to {
+		  width: 200px; /* Končí s plnou šířkou */
+		}
+	}
+
+.main-cards {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	
+}
+
+.card-body {
+	background: #8301c0;
+	color: $word-color;
+	
+}
+
+.body-one {
+	border-radius: 5px;
+}
+
+.btn {
+	background: blue;
+	color: $word-color;
+}
+
+// ------ our team --------
+
+.team-members {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding-bottom: 50px;
+}
+
+.bg-image {
+	border: 10px solid blue;
+
+}
+
+.bg-image:hover {
+	border: 10px solid #8301c0;
+	transition: all 0.5s;
+}
+
+.img-fluid {
+	transform: scale(1);
+    transition: all 0.5s linear;
+}
+
+.img-fluid:hover {
+	transform: scale(1.1);
+    transition: all 0.5s linear;
+}
+
+//  ---------------- footer --------------
+footer {
+	background: url("./images/d12.jpg");
+	background-size: cover;
+    height: 50vh;
+	background-position: center;
+}
