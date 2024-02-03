@@ -5,7 +5,7 @@ body, html {
   box-sizing: border-box;
 }
 
-header {
+#background-images {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/7489905.jpg");
   background-size: cover;
   height: 65vh;
@@ -13,15 +13,16 @@ header {
 }
 
 nav {
-  background-color: #4b1c4a;
+  background-color: rgb(83, 82, 82);
   padding: 15px;
-  font-size: 20px;
+  font-size: 17px;
+  z-index: 3;
 }
 
 nav ul {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 30px;
   align-items: center;
   margin: 0 auto;
 }
@@ -32,12 +33,11 @@ nav ul li {
 }
 
 nav ul li a {
-  color: gold;
-  font-weight: bold;
+  color: white;
 }
 
 nav ul li a:hover {
-  color: gold;
+  color: white;
 }
 
 nav ul li::before {
@@ -45,7 +45,7 @@ nav ul li::before {
   position: absolute;
   width: 100%;
   height: 4px;
-  background-color: gold;
+  background-color: white;
   bottom: 0;
   left: 0;
   transform: scaleX(0); /* Čára bude původně neviditelná */
@@ -57,23 +57,18 @@ nav ul li:hover::before {
   transform: scaleX(1);
 }
 
-.client-button {
-  text-align: right;
-  margin-right: 80px;
-  margin-top: -45px;
-}
-
 .btn1 {
-  background-color: #8301c0;
-  color: gold;
+  background-color: #823173;
+  color: white;
+  font-weight: bold;
   border: none;
-  padding: 10px 30px;
+  padding: 8px 18px;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 main {
-  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("images/1186.jpeg");
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("images/5594016.jpg");
   padding-top: 50px;
   background-size: cover;
   border: none;
@@ -84,44 +79,80 @@ main {
 }
 
 .main-title {
-  color: gold;
+  color: black;
   margin: 30px 0px;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .main-title::after {
   content: "";
   display: block;
-  width: 0px;
-  border-bottom: 5px solid blue;
+  /* width: 0px; */
+  border-bottom: 5px dashed #823173;
   margin: 10px 0px;
-  animation: expandLine 2s ease-out forwards; /* Animace trvá 2 sekundy */
+  animation: expandLine 2s ease-out forwards;
 }
 
-@keyframes expandLine {
+#title1::after {
+  width: 0px; /* Šířka pro nadpis s ID "title1" */
+  animation: expandLine1 2s ease-out forwards;
+}
+
+#title2::after {
+  width: 0px; /* Šířka pro nadpis s ID "title1" */
+  animation: expandLine2 2s ease-out forwards;
+}
+
+#title3::after {
+  width: 0px; /* Šířka pro nadpis s ID "title2" */
+  animation: expandLine3 2s ease-out forwards;
+}
+
+#title4::after {
+  width: 0px; /* Šířka pro nadpis s ID "title2" */
+  animation: expandLine4 2s ease-out forwards;
+}
+
+#title5::after {
+  width: 0px; /* Šířka pro nadpis s ID "title2" */
+  animation: expandLine5 2s ease-out forwards;
+}
+
+@keyframes expandLine1 {
   to {
-    width: 1000px; /* Končí s plnou šířkou */
+    width: 900px;
+  }
+}
+@keyframes expandLine2 {
+  to {
+    width: 200px;
+  }
+}
+@keyframes expandLine3 {
+  to {
+    width: 300px;
+  }
+}
+@keyframes expandLine4 {
+  to {
+    width: 150px;
+  }
+}
+@keyframes expandLine5 {
+  to {
+    width: 450px;
   }
 }
 .main-par {
-  color: gold;
+  color: #676767;
   margin: 40px 0px;
   font-size: 18px;
 }
 
-.main-cards-title::after {
-  content: "";
-  display: block;
-  width: 0px;
-  border-bottom: 5px solid blue;
-  margin: 10px 0px;
-  animation: expandLine 2s ease-out forwards; /* Animace trvá 2 sekundy */
+.card {
+  box-shadow: 5px 5px 5px;
 }
 
-@keyframes expandLine {
-  to {
-    width: 200px; /* Končí s plnou šířkou */
-  }
-}
 .main-cards {
   display: flex;
   justify-content: center;
@@ -129,8 +160,8 @@ main {
 }
 
 .card-body {
-  background: #8301c0;
-  color: gold;
+  background: #823173;
+  color: white;
 }
 
 .body-one {
@@ -138,8 +169,7 @@ main {
 }
 
 .btn {
-  background: blue;
-  color: gold;
+  background: #443c8f;
 }
 
 .team-members {
@@ -150,11 +180,11 @@ main {
 }
 
 .bg-image {
-  border: 10px solid blue;
+  border: 10px solid grey;
 }
 
 .bg-image:hover {
-  border: 10px solid #8301c0;
+  border: 10px solid rgb(170, 170, 170);
   transition: all 0.5s;
 }
 
@@ -168,11 +198,158 @@ main {
   transition: all 0.5s linear;
 }
 
-footer {
-  background: url("./images/d12.jpg");
+#contactsFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 30px;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("images/5594016.jpg");
+}
+
+.image {
+  width: 50%;
+}
+
+.main-title-contact {
+  color: black;
+  margin: 30px 0px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.main-title-contact::after {
+  content: "";
+  display: block;
+  border-bottom: 5px dashed #823173;
+}
+
+.pataText p i { /* abych měla ikonky stejně zarovnaný */
+  width: 35px;
+}
+
+#googleMaps iframe {
+  width: 100%;
+}
+
+#links-to-sites {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("images/5594016.jpg");
   background-size: cover;
-  height: 50vh;
-  background-position: center;
+  height: 90vh;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.linksFlex {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 30px;
+  display: flex;
+}
+
+.links-title {
+  color: black;
+  margin: 0 auto;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 50px;
+}
+
+.links-title::after {
+  content: "";
+  display: block;
+  border-bottom: 5px dashed #823173;
+  margin: 10px 0px;
+  width: 0px;
+  animation: expandLine 2s ease-out forwards;
+}
+
+@keyframes expandLine {
+  to {
+    width: 300px;
+  }
+}
+.lists ul li {
+  list-style-type: none;
+  margin-top: 10px;
+}
+
+.lists ul li a {
+  color: black;
+  font-size: 18px;
+}
+
+.lists ul li a i {
+  width: 30px;
+}
+
+.wrappers-links {
+  width: 50%;
+}
+
+.wrapper-links-one {
+  background: #823173;
+  content: "";
+  height: 400px;
+  overflow: hidden;
+  transform: rotate(217deg);
+  width: 1200px;
+  margin-left: 300px;
+  margin-top: -70px;
+}
+
+.wrapper-links-two {
+  background: #823173;
+  content: "";
+  height: 700px;
+  margin-top: 130px;
+  transform: rotate(160deg);
+  width: 1200px;
+  overflow: hidden;
+}
+
+footer {
+  height: 400px;
+  overflow: hidden;
+  background: #b3b3b3;
+}
+
+.footer-wrapper {
+  background: #823173;
+  content: "";
+  height: 800px;
+  margin-top: -70px;
+  transform: rotate(164deg);
+  width: 1700px;
+}
+
+.footer-items {
+  width: 500px;
+  margin: 0 auto;
+  color: #823173;
+}
+
+.main-title-footer {
+  color: black;
+  margin: 30px 0px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.main-title-footer::after {
+  content: "";
+  display: block;
+  border-bottom: 5px dashed #823173;
+  width: 40%;
+}
+
+.footer-down {
+  background: rgb(83, 82, 82);
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+}
+
+.footer-down p {
+  margin: 0 auto;
+  padding: 20px 0px;
 }
 
 .hidden {
@@ -186,4 +363,61 @@ footer {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
+}
+
+.logo {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(100%);
+  transition: all 1.5s;
+}
+
+.showTwo {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.reveal:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.reveal:nth-child(3) {
+  transition-delay: 300ms;
+}
+
+.reveal:nth-child(4) {
+  transition-delay: 400ms;
+}
+
+.reveal:nth-child(5) {
+  transition-delay: 500ms;
+}
+
+.reveal:nth-child(6) {
+  transition-delay: 600ms;
+}
+
+.reveal:nth-child(7) {
+  transition-delay: 700ms;
+}
+
+.reveal:nth-child(8) {
+  transition-delay: 800ms;
+}
+
+.reveal:nth-child(9) {
+  transition-delay: 900ms;
+}
+
+.reveal:nth-child(10) {
+  transition-delay: 1000ms;
+}
+
+.reveal:nth-child(11) {
+  transition-delay: 1100ms;
+}
+
+.reveal:nth-child(12) {
+  transition-delay: 1200ms;
 }/*# sourceMappingURL=style.css.map */
