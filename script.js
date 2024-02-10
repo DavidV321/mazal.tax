@@ -32,3 +32,4 @@ const observerTwo = new IntersectionObserver((entries)=> {
 
 const hiddenElementsTwo = document.querySelectorAll('.logo');
 hiddenElementsTwo.forEach((el) => observerTwo.observe(el));
+
