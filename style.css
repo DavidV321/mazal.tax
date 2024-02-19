@@ -6,7 +6,7 @@ body, html {
 }
 
 #background-images {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("images/7489905.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("images/7489905.jpg");
   background-size: cover;
   height: 65vh;
   background-attachment: fixed;
@@ -20,9 +20,9 @@ nav {
 }
 
 nav img {
-  width: 6%;
+  width: 23%;
   float: left;
-  margin: -13px 0px 0px 20px;
+  margin: -34px 0px 10px 20px;
 }
 
 nav ul {
@@ -232,12 +232,16 @@ main {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  gap: 30px;
+  gap: 170px;
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("images/5594016.jpg");
 }
 
 .image {
-  width: 50%;
+  width: 40%;
+}
+
+.image img {
+  width: 90%;
 }
 
 .main-title-contact {
@@ -250,6 +254,11 @@ main {
   content: "";
   display: block;
   border-bottom: 5px dashed #823173;
+}
+
+.pataText h4 {
+  color: #823173;
+  margin-bottom: 20px;
 }
 
 .pataText p i { /* abych měla ikonky stejně zarovnaný */
